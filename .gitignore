@@ -1,0 +1,7 @@
+out/
+classes/
+lib/
+
+*build.xml
+*.iml
+.idea

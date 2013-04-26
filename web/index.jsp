@@ -1,0 +1,1 @@
+<% response.sendRedirect("welcomeservlet?err=nill"); %>

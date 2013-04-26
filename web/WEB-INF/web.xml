@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <filter>
+        <filter-name>CompressionFilter</filter-name>
+        <filter-class>com.foodservice.filter.CompressionFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.foodservice.filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CompressionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>FoodServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.FoodServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MealServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.MealServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>com.foodservice.controller.CommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/commentservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcomeservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logoutservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MealServlet</servlet-name>
+        <url-pattern>/mealservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FoodServlet</servlet-name>
+        <url-pattern>/foodservlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

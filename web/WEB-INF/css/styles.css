@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+th,td{
+    text-align: left;
+    padding-left: 5px;
+    padding: 5px;
+}
+
+a{
+    text-decoration: underline;
+    color: #6495ed;
+}
+
+a:hover{
+
+    color: #dc143c;
+}
+
+select{
+    padding: 2px;
+}
+
+div.error{
+
+    background-color: #ffb6c1;
+    width: 60%;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+div.comment{
+
+    background-color: #d3d3d3;
+    padding: 5px;
+    border: 5px;
+    width: 60%
+}
